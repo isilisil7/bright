@@ -1,0 +1,17 @@
+#verilen listeden en küçük sayıyı bulan program (min() kullanmadan)
+def f(l):
+    bayrak = l[0]
+    for i in range(0, len(l)):
+        if l[i]<bayrak:
+            bayrak=l[i]
+        elif l[i]>bayrak and l[i]==bayrak:
+            continue
+    return bayrak
+
+
+liste = [-1, -28, -33, 5, 5, 6, 7777]
+print(f(liste))
+
+#verilen listeden en küçük sayıyı bulan program (min() kullanarak)
+def f(l):
+    return min(l)

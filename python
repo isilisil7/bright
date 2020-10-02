@@ -15,3 +15,21 @@ print(f(liste))
 #verilen listeden en küçük sayıyı bulan program (min() kullanarak)
 def f(l):
     return min(l)
+    
+    
+    
+    
+#fibonacci serisi 
+def f(n):
+   if n <= 1:
+       return n
+   else:
+       return(f(n-1) + f(n-2))
+
+n = 6 #int(input("Sıralama için bir sayi giriniz: "))
+
+if n <= 0:
+   print("Pozitif bir sayi giriniz:")
+else:
+   for i in range(n):
+       print(f(i))

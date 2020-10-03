@@ -33,3 +33,125 @@ if n <= 0:
 else:
    for i in range(n):
        print(f(i))
+
+# sayı tahmin oyunu yapımı
+from random import randint
+
+tut = randint(1, 100)
+
+while True:
+    sayi = int(input("Lutfen bir sayi giriniz: "))
+    print("Girdiginiz sayi: ", str(sayi))
+
+    if sayi < tut:
+        print("Yanlış!!! Lutfen daha buyuk bir sayi giriniz:  ")
+        continue
+    elif sayi > tut:
+        print("Yanlış!!! Lutfen daha kucuk bir sayi giriniz:  ")
+        continue
+    else:
+        break
+print("Rastgele secilen sayi: ", str(tut))
+
+
+# artık yıl hesaplama
+
+yil = int(input("Bir yil giriniz: "))
+print("Girdiginiz yil: ", str(yil))
+
+if yil % 4 == 0:
+    if yil % 100 == 0:
+        if yil % 400 == 0:
+            print("Girdiginiz yil artik yildir.")
+        else:
+            print("Girdiginiz yil artik yil degildir.")
+
+    else:
+        print("Girdiginiz yil artik yildir.")
+
+else:
+    print("Girdiginiz yil artik yil degildir.")
+
+#daha kısa hali:
+yil = int(input("Bir yil giriniz: "))
+print("Girdiginiz yil: ", str(yil))
+if yil%4==0 and (yil%100!=0 or yil%400==0):
+    print("Girdiginiz yil artik yildir.")
+else:print("Girdiginiz sayi artik yil degildir.")
+
+
+def artikYil(yil):
+    artik=False
+    if yil % 4 == 0 and (yil % 100 != 0 or yil % 400 == 0):
+        artik=True
+    return artik
+
+def yilGunu(g,a,y):
+    gunler = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if artikYil(y):
+        gunler[]
+
+print(yilGunu(1,1,2001))
+
+# 5'in katlarını yazdırma
+sayilar = [18, 22, 15, 85, 65, 30, 10, 20, 32, 34, 28, 101, 5, 4, 32]
+yeni=[]
+for i in range(0, len(sayilar)):
+    if sayilar[i] % 5 == 0:
+        yeni.append(sayilar[i])
+print(yeni)
+
+
+#sesli harf kaldırma kodu
+sesli="aeıou"
+yeni=[]
+def f(cumle):
+    for i in cumle:
+        if i not in sesli:
+            yeni.append(i)
+    return yeni
+
+
+print(f("Naber cınım?"))
+
+
+#kaçıncı yüzyıl?
+yil=int(input("Bir yil giriniz: "))
+print("Girdiğiniz sayi: ", str(yil))
+
+def f(yil):
+    a=int(yil/1000)
+    b=int((yil%1000)/100)
+    c=int(((yil%1000)%100)/10)
+    d=int(((yil%1000)%100)%10)
+    print(int(10*a+b+1), ". yuzyil")
+
+print(f(yil))
+
+# her elemanı indexi ile çarpma
+liste = [1, 2, 3, 4, 5]
+
+
+def f(liste):
+    toplam = 0
+    for i in range(0, len(liste)):
+        toplam += i * liste[i]
+    return toplam
+
+print(f(liste))
+
+
+#sayı ve harfleri sayma
+sayi="1234567890"
+harf="abcdefghijklmnoprstuvyzwxq"
+def f(cumle):
+    sayacSayi=0
+    sayacHarf=0
+    for i in cumle:
+        if i in sayi:
+            sayacSayi+=1
+        elif i in harf:
+            sayacHarf+=1
+    print(sayacSayi, " adet sayi,  ", sayacHarf, " adet harf vardır.")
+
+print(f("h3ll0 wor1d"))
